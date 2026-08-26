@@ -135,7 +135,7 @@ export default function AuthForm({ mode }: { mode: Mode }) {
 
             <input
               className="input"
-              placeholder="Amina Bello"
+              placeholder="Adeniyi Jamaldeen"
               value={form.full_name}
               onChange={(event) =>
                 updateField('full_name', event.target.value)
@@ -169,7 +169,7 @@ export default function AuthForm({ mode }: { mode: Mode }) {
             </label>
 
             <input
-              className="input"
+              className="input date-input"
               type="date"
               value={form.date_of_birth}
               onChange={(event) =>
@@ -189,7 +189,7 @@ export default function AuthForm({ mode }: { mode: Mode }) {
         <input
           className="input"
           type="email"
-          placeholder="you@example.com"
+          placeholder="jamaldeen@xxxx.com"
           value={form.email}
           onChange={(event) =>
             updateField('email', event.target.value)

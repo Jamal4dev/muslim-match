@@ -108,6 +108,11 @@ button {
   box-shadow: 0 0 0 3px rgba(244, 201, 93, 0.16);
 }
 
+.date-input {
+  width: min(100%, 15rem);
+  min-width: 0;
+}
+
 .primary-button {
   border: 0;
   border-radius: 999px;

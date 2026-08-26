@@ -69,7 +69,16 @@ export default function AuthForm({ mode }: { mode: Mode }) {
         body: JSON.stringify(payload),
       })
 
-      const data = await res.json()
+      const responseText = await res.text()
+      let data: { details?: unknown; error?: string; access_token?: string } = {}
+
+      if (responseText) {
+        try {
+          data = JSON.parse(responseText)
+        } catch {
+          data = { error: responseText }
+        }
+      }
 
       if (!res.ok) {
         const details =
@@ -108,7 +117,7 @@ export default function AuthForm({ mode }: { mode: Mode }) {
       router.push('/dashboard')
     } catch {
       setError(
-        'Could not connect to the server. Make sure npm run dev is running.'
+        'We could not complete the request. Please check your connection and try again.'
       )
     } finally {
       setLoading(false)

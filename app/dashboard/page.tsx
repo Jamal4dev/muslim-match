@@ -24,11 +24,6 @@ type Event = {
 
 const profileFields = ['location', 'marriage_timeline', 'halal_lifestyle', 'religiosity', 'education', 'occupation']
 
-function signOut() {
-  localStorage.removeItem('token')
-  window.location.href = '/'
-}
-
 export default function DashboardPage() {
   const [profile, setProfile] = useState<Profile>(null)
   const [recommendations, setRecommendations] = useState<Recommendation[]>([])
@@ -73,13 +68,12 @@ export default function DashboardPage() {
 
   return (
     <main className="container mx-auto min-h-[calc(100vh-64px)] px-4 py-10 lg:px-0">
-      <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+      <div className="mb-8">
         <div>
           <div className="eyebrow mb-2">Your private space</div>
           <h1 className="text-4xl font-black text-white">Assalamu alaikum</h1>
           <p className="mt-2 text-emerald-100/70">Take the next thoughtful step in your journey.</p>
         </div>
-        <button className="secondary-button" type="button" onClick={signOut}>Sign out</button>
       </div>
 
       {loading && <div className="glass-card p-6 text-emerald-100">Loading your account...</div>}

@@ -1,0 +1,26 @@
+{
+  "name": "Muslim Match",
+  "short_name": "MuslimMatch",
+  "description": "A halal-first marriage platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071a18",
+  "theme_color": "#071a18",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/ayoola-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/ayoola-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["lifestyle", "social"],
+  "lang": "en"
+}

@@ -40,7 +40,8 @@ Muslim Match is a halal-first marriage platform for meeting compatible partners 
 
 	```env
 	NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-	NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+	NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your_supabase_publishable_key
+	SUPABASE_SECRET_KEY=your_supabase_secret_key
 	```
 
 	Find these values in your Supabase project under **Project Settings > API**. Never commit real credentials.
